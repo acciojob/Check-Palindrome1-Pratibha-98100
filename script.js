@@ -2,15 +2,15 @@
 
 function palindrome(str){
 	str = str.toLowerCase();
-	str = str.trim();
-	let st = 0;
-	let ed = str.length-1;
-	while(st<ed){
-		if(str.charAt(st)!==str.charAt(ed)){
+	//str = str.trim();
+	let i = 0;
+	let last = str.length-1;
+	while(i<last){
+		if(str.charAt(i)!==str.charAt(last)){
 			return false;
 		}
-		st++;
-		ed--;
+		i++;
+		last--;
 	}
 	return true;
 }
