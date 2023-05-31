@@ -1,23 +1,17 @@
-function palindrome(str){
+// complete the given function
 
-	//1- Total length of str 
-    const len = string.length;  
-  
-    //2- Checking 
-    for (let i = 0; i < len / 2; i++) {  
-  
-        // validate the first and last characters are same  
-        if (string[i] !== string[len - 1 - i]) {  
-            return false;  
-        }  
-    }  
-    return true;
-}  
-  
-// // accept the string or number from the prompt  
-// const string = prompt('Enter a string or number: ');  
-  
-// const value = validatePalin(string);  
-  
-// console.log(value);  
+function palindrome(str){
+	str = str.toLowerCase();
+	str = str.trim();
+	let st = 0;
+	let ed = str.length-1;
+	while(st<ed){
+		if(str.charAt(st)!==str.charAt(ed)){
+			return false;
+		}
+		st++;
+		ed--;
+	}
+	return true;
+}
 module.exports = palindrome
